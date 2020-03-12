@@ -13,7 +13,7 @@ class GetAircraftDetailTest(TestCase):
 
     def test_get_aircraft_detail(self) -> None:
         # get API response
-        response = self.client.get(reverse('aircraft-list', args=[45, 30]))
+        response = self.client.get(reverse('aircraft', args=[45, 30]))
         # get data from service
         aircraft = Aircraft(id=45, pax=30)
         serializer = AircraftSerializer(aircraft)
